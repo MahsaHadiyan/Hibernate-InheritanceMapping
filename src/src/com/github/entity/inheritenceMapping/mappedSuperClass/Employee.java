@@ -1,4 +1,4 @@
-package src.org.j2os.entity.inheritenceMapping.mappedSuperClass;
+package src.com.github.entity.inheritenceMapping.mappedSuperClass;
 
 import javax.persistence.Entity;
 import javax.persistence.Table;

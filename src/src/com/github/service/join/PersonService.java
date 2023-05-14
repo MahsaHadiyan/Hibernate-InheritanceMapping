@@ -1,4 +1,4 @@
-package src.org.j2os.service.join;
+package src.com.github.service.join;
 
 import org.j2os.common.JPA;
 import org.j2os.entity.inheritenceMapping.join.ContractEmployee;

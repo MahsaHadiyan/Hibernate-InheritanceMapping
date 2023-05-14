@@ -1,4 +1,4 @@
-package src.org.j2os.common;
+package src.com.github.common;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;

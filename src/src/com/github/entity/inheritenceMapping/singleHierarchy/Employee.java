@@ -1,4 +1,4 @@
-package src.org.j2os.entity.inheritenceMapping.singleHierarchy;
+package src.com.github.entity.inheritenceMapping.singleHierarchy;
 
 import javax.persistence.Column;
 import javax.persistence.DiscriminatorColumn;

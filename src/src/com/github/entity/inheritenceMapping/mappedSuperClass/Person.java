@@ -1,40 +1,35 @@
-package src.org.j2os.entity.inheritenceMapping.tablePerClass;
+package src.com.github.entity.inheritenceMapping.mappedSuperClass;
 
 import javax.persistence.Column;
-import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.Inheritance;
-import javax.persistence.InheritanceType;
-import javax.persistence.Table;
+import javax.persistence.MappedSuperclass;
 
 /**
  * Revision History:
  * Date            Author           Task ID                         Notes
  * ==========   =================   ==============  ===============================================
- * 2023.05.08   Mahsa
+ * 2023.05.09   Mahsa
  */
-@Entity
-@Table(name = "employee102")
-@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
-public class Employee {
+@MappedSuperclass
+public class Person {
 
     @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.AUTO)
 
     @Column(name = "id")
-    private int id;
+    private long personId;
 
     @Column(name = "name")
     private String name;
 
-    public int getId() {
-        return id;
+    public long getPersonId() {
+        return personId;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setPersonId(long personId) {
+        this.personId = personId;
     }
 
     public String getName() {

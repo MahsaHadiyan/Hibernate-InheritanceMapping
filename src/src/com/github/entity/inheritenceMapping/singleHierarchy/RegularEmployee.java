@@ -1,10 +1,8 @@
-package src.org.j2os.entity.inheritenceMapping.tablePerClass;
+package src.com.github.entity.inheritenceMapping.singleHierarchy;
 
-import javax.persistence.AttributeOverride;
-import javax.persistence.AttributeOverrides;
 import javax.persistence.Column;
+import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
-import javax.persistence.Table;
 
 /**
  * Revision History:
@@ -13,12 +11,8 @@ import javax.persistence.Table;
  * 2023.05.08   Mahsa
  */
 @Entity
-@Table(name="regularemployee102")
-@AttributeOverrides({
-        @AttributeOverride(name="id", column=@Column(name="id")),
-        @AttributeOverride(name="name", column=@Column(name="name"))
-})
-public class RegularEmployee extends Employee{
+@DiscriminatorValue("regularemployee")
+public class RegularEmployee extends Employee {
 
     @Column(name="salary")
     private float salary;

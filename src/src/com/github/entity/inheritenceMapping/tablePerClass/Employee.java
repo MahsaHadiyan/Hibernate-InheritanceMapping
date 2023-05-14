@@ -1,4 +1,4 @@
-package src.org.j2os.entity.inheritenceMapping.join;
+package src.com.github.entity.inheritenceMapping.tablePerClass;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -16,8 +16,8 @@ import javax.persistence.Table;
  * 2023.05.08   Mahsa
  */
 @Entity
-@Table(name = "employee103")
-@Inheritance(strategy= InheritanceType.JOINED)
+@Table(name = "employee102")
+@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 public class Employee {
 
     @Id

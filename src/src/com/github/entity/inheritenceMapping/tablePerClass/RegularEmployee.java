@@ -1,8 +1,9 @@
-package src.org.j2os.entity.inheritenceMapping.join;
+package src.com.github.entity.inheritenceMapping.tablePerClass;
 
+import javax.persistence.AttributeOverride;
+import javax.persistence.AttributeOverrides;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
 
 /**
@@ -12,9 +13,12 @@ import javax.persistence.Table;
  * 2023.05.08   Mahsa
  */
 @Entity
-@Table(name="regularemployee103")
-@PrimaryKeyJoinColumn(name="ID")
-public class RegularEmployee extends Employee {
+@Table(name="regularemployee102")
+@AttributeOverrides({
+        @AttributeOverride(name="id", column=@Column(name="id")),
+        @AttributeOverride(name="name", column=@Column(name="name"))
+})
+public class RegularEmployee extends Employee{
 
     @Column(name="salary")
     private float salary;
